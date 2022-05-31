@@ -29,6 +29,7 @@ persist.vendor.bt.aac_frm_ctl.enabled=true
 persist.vendor.bt.aac_vbr_frm_ctl.enabled=true
 ro.bluetooth.a2dp_offload.supported=true
 ro.vendor.bluetooth.wipower=false
+persist.vendor.btstack.enable.lpa=true
 
 # Chipset
 ro.soc.manufacturer=QTI
