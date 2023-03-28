@@ -218,6 +218,7 @@ debug.sf.latch_unsignaled=1
 persist.demo.hdmirotationlock=false
 ro.hardware.egl=adreno
 ro.hardware.vulkan=adreno
+ro.hwui.render_ahead=20
 ro.opengles.version=196610
 vendor.gralloc.disable_ubwc=0
 debug.hwui.use_hint_manager=true
