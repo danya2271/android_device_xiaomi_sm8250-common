@@ -4,10 +4,39 @@ camera.disable_zsl_mode=true
 # Charger
 ro.charger.disable_init_blank=true
 
+# Dalvik
+dalvik.vm.image-dex2oat-threads=8
+dalvik.vm.image-dex2oat-cpu-set=0,1,2,3,4,5,6,7
+dalvik.vm.dex2oat-threads=8
+dalvik.vm.dex2oat-cpu-set=0,1,2,3,4,5,6,7
+dalvik.vm.boot-dex2oat-threads=8
+dalvik.vm.boot-dex2oat-cpu-set=0,1,2,3,4,5,6,7
+dalvik.vm.dex2oat64.enabled=true
+
 # Display
 debug.gralloc.gfx_ubwc_disable=0
 debug.sf.enable_hwc_vds=1
 persist.vendor.color.matrix=2
+
+# Rendering
+debug.enable.sglscale=1
+debug.egl.trace=0
+debug.egl.hw=1
+debug.sf.disable_hwc=0
+debug.sf.recomputecrop=0
+persist.hwc.ptor.enable=true
+debug.sf.gpu_comp_tiling=1
+vendor.display.disable_partial_split=1
+debug.hwui.use_buffer_age=false
+vendor.display.perf_hint_window=50
+
+# LMKD
+ro.lmk.log_stats=false
+
+# GPU
+debug.hwui.renderer=skiagl
+debug.renderengine.backend=skiaglthreaded
+debug.hwui.skia_atrace_enabled=false
 
 # CNE
 persist.vendor.cne.feature=1
