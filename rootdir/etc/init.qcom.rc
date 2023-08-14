@@ -63,6 +63,14 @@ on early-init
 
 on property:sys.boot_completed=1
 
+# configure governor settings for big cluster
+    write /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor schedutil
+    write /sys/devices/system/cpu/cpu4/cpufreq/schedutil/up_rate_limit_us 95
+
+    # configure governor settings for big big CPU
+    write /sys/devices/system/cpu/cpu7/cpufreq/scaling_governor schedutil
+    write /sys/devices/system/cpu/cpu7/cpufreq/schedutil/up_rate_limit_us 95
+
 # Other tune
     write /proc/sys/kernel/panic_on_oops 0
     write /proc/sys/vm/panic_on_oom 0

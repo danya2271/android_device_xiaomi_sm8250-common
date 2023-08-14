@@ -217,7 +217,7 @@ function 8937_sched_dcvs_eas()
         ## enable governor for power cluster
         echo 1 > /sys/devices/system/cpu/cpu4/online
         echo "schedutil" > /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor
-        echo 0 > /sys/devices/system/cpu/cpu4/cpufreq/schedutil/up_rate_limit_us
+        echo 155 > /sys/devices/system/cpu/cpu4/cpufreq/schedutil/up_rate_limit_us
         echo 0 > /sys/devices/system/cpu/cpu4/cpufreq/schedutil/down_rate_limit_us
         #set the hispeed_freq
         echo 768000 > /sys/devices/system/cpu/cpu4/cpufreq/schedutil/hispeed_freq
@@ -731,7 +731,7 @@ function sdm660_sched_schedutil_dcvs() {
 
         # configure governor settings for big cluster
         echo "schedutil" > /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor
-        echo 0 > /sys/devices/system/cpu/cpu4/cpufreq/schedutil/up_rate_limit_us
+        echo 155 > /sys/devices/system/cpu/cpu4/cpufreq/schedutil/up_rate_limit_us
         echo 0 > /sys/devices/system/cpu/cpu4/cpufreq/schedutil/down_rate_limit_us
         echo 1401600 > /sys/devices/system/cpu/cpu4/cpufreq/schedutil/hispeed_freq
     fi
@@ -2562,7 +2562,7 @@ case "$target" in
             # configure governor settings for big cluster
             echo 1 > /sys/devices/system/cpu/cpu4/online
             echo "schedutil" > /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor
-            echo 0 > /sys/devices/system/cpu/cpu4/cpufreq/schedutil/up_rate_limit_us
+            echo 155 > /sys/devices/system/cpu/cpu4/cpufreq/schedutil/up_rate_limit_us
             echo 0 > /sys/devices/system/cpu/cpu4/cpufreq/schedutil/down_rate_limit_us
             echo 1401600 > /sys/devices/system/cpu/cpu4/cpufreq/schedutil/hispeed_freq
             #default value for hispeed_load is 90, for sdm632 it should be 85
@@ -2950,7 +2950,7 @@ case "$target" in
 
                          ## enable governor for power cluster
                          echo "schedutil" > /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor
-                         echo 0 > /sys/devices/system/cpu/cpu4/cpufreq/schedutil/up_rate_limit_us
+                         echo 155 > /sys/devices/system/cpu/cpu4/cpufreq/schedutil/up_rate_limit_us
                          echo 0 > /sys/devices/system/cpu/cpu4/cpufreq/schedutil/down_rate_limit_us
 
                          #set the hispeed_freq
@@ -3908,7 +3908,7 @@ case "$target" in
 
         # configure governor settings for gold+ cluster
         echo "schedutil" > /sys/devices/system/cpu/cpufreq/policy7/scaling_governor
-        echo 0 > /sys/devices/system/cpu/cpufreq/policy7/schedutil/up_rate_limit_us
+        echo 375 > /sys/devices/system/cpu/cpufreq/policy7/schedutil/up_rate_limit_us
         echo 0 > /sys/devices/system/cpu/cpufreq/policy7/schedutil/down_rate_limit_us
         echo 1228800 > /sys/devices/system/cpu/cpufreq/policy7/schedutil/hispeed_freq
         echo 85 > /sys/devices/system/cpu/cpu7/cpufreq/schedutil/hispeed_load
@@ -4231,7 +4231,7 @@ case "$target" in
 
             # configure governor settings for big cluster
             echo "schedutil" > /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor
-            echo 0 > /sys/devices/system/cpu/cpu4/cpufreq/schedutil/up_rate_limit_us
+            echo 155 > /sys/devices/system/cpu/cpu4/cpufreq/schedutil/up_rate_limit_us
             echo 0 > /sys/devices/system/cpu/cpu4/cpufreq/schedutil/down_rate_limit_us
             echo 1401600 > /sys/devices/system/cpu/cpu4/cpufreq/schedutil/hispeed_freq
             echo 1056000 > /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq
@@ -4341,7 +4341,7 @@ case "$target" in
 
             # configure governor settings for big cluster
             echo "schedutil" > /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor
-            echo 0 > /sys/devices/system/cpu/cpu4/cpufreq/schedutil/up_rate_limit_us
+            echo 155 > /sys/devices/system/cpu/cpu4/cpufreq/schedutil/up_rate_limit_us
             echo 0 > /sys/devices/system/cpu/cpu4/cpufreq/schedutil/down_rate_limit_us
             echo 1344000 > /sys/devices/system/cpu/cpu4/cpufreq/schedutil/hispeed_freq
             echo 1056000 > /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq
@@ -4515,7 +4515,7 @@ case "$target" in
 
     # configure governor settings for big cluster
     echo "schedutil" > /sys/devices/system/cpu/cpu6/cpufreq/scaling_governor
-    echo 0 > /sys/devices/system/cpu/cpu6/cpufreq/schedutil/up_rate_limit_us
+    echo 95 > /sys/devices/system/cpu/cpu6/cpufreq/schedutil/up_rate_limit_us
     echo 0 > /sys/devices/system/cpu/cpu6/cpufreq/schedutil/down_rate_limit_us
     echo 1267200 > /sys/devices/system/cpu/cpu6/cpufreq/schedutil/hispeed_freq
     echo 652800 > /sys/devices/system/cpu/cpu6/cpufreq/scaling_min_freq
@@ -5328,14 +5328,14 @@ case "$target" in
 
 	# configure governor settings for gold cluster
 	echo "schedutil" > /sys/devices/system/cpu/cpufreq/policy4/scaling_governor
-	echo 0 > /sys/devices/system/cpu/cpufreq/policy4/schedutil/up_rate_limit_us
+	echo 155 > /sys/devices/system/cpu/cpufreq/policy4/schedutil/up_rate_limit_us
         echo 0 > /sys/devices/system/cpu/cpufreq/policy0/schedutil/down_rate_limit_us
 	echo 1612800 > /sys/devices/system/cpu/cpufreq/policy4/schedutil/hispeed_freq
 	echo 1 > /sys/devices/system/cpu/cpufreq/policy4/schedutil/pl
 
 	# configure governor settings for gold+ cluster
 	echo "schedutil" > /sys/devices/system/cpu/cpufreq/policy7/scaling_governor
-	echo 0 > /sys/devices/system/cpu/cpufreq/policy7/schedutil/up_rate_limit_us
+	echo 375 > /sys/devices/system/cpu/cpufreq/policy7/schedutil/up_rate_limit_us
         echo 0 > /sys/devices/system/cpu/cpufreq/policy0/schedutil/down_rate_limit_us
 	echo 1612800 > /sys/devices/system/cpu/cpufreq/policy7/schedutil/hispeed_freq
 	echo 1 > /sys/devices/system/cpu/cpufreq/policy7/schedutil/pl
@@ -5513,14 +5513,14 @@ case "$target" in
 
 	# configure governor settings for gold cluster
 	echo "schedutil" > /sys/devices/system/cpu/cpufreq/policy4/scaling_governor
-	echo 0 > /sys/devices/system/cpu/cpufreq/policy4/schedutil/up_rate_limit_us
+	echo 155 > /sys/devices/system/cpu/cpufreq/policy4/schedutil/up_rate_limit_us
 	echo 0 > /sys/devices/system/cpu/cpufreq/policy4/schedutil/down_rate_limit_us
 	echo 1612800 > /sys/devices/system/cpu/cpufreq/policy4/schedutil/hispeed_freq
 	echo 1 > /sys/devices/system/cpu/cpufreq/policy4/schedutil/pl
 
 	# configure governor settings for gold+ cluster
 	echo "schedutil" > /sys/devices/system/cpu/cpufreq/policy7/scaling_governor
-	echo 0 > /sys/devices/system/cpu/cpufreq/policy7/schedutil/up_rate_limit_us
+	echo 375 > /sys/devices/system/cpu/cpufreq/policy7/schedutil/up_rate_limit_us
 	echo 0 > /sys/devices/system/cpu/cpufreq/policy7/schedutil/down_rate_limit_us
 	echo 1612800 > /sys/devices/system/cpu/cpufreq/policy7/schedutil/hispeed_freq
 	echo 1 > /sys/devices/system/cpu/cpufreq/policy7/schedutil/pl
@@ -5768,14 +5768,14 @@ case "$target" in
 	# configure governor settings for gold cluster
 	echo "schedutil" > /sys/devices/system/cpu/cpufreq/policy4/scaling_governor
 	echo 0 > /sys/devices/system/cpu/cpufreq/policy4/schedutil/down_rate_limit_us
-	echo 0 > /sys/devices/system/cpu/cpufreq/policy4/schedutil/up_rate_limit_us
+	echo 155 > /sys/devices/system/cpu/cpufreq/policy4/schedutil/up_rate_limit_us
 	echo 1574400 > /sys/devices/system/cpu/cpufreq/policy4/schedutil/hispeed_freq
 	echo 1 > /sys/devices/system/cpu/cpufreq/policy4/schedutil/pl
 
 	# configure governor settings for gold+ cluster
 	echo "schedutil" > /sys/devices/system/cpu/cpufreq/policy7/scaling_governor
 	echo 0 > /sys/devices/system/cpu/cpufreq/policy7/schedutil/down_rate_limit_us
-	echo 0 > /sys/devices/system/cpu/cpufreq/policy7/schedutil/up_rate_limit_us
+	echo 375 > /sys/devices/system/cpu/cpufreq/policy7/schedutil/up_rate_limit_us
         if [ $rev == "2.0" ] || [ $rev == "2.1" ]; then
 		echo 1632000 > /sys/devices/system/cpu/cpufreq/policy7/schedutil/hispeed_freq
 	else
