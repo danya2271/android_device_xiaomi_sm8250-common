@@ -23,6 +23,7 @@
         "9999999",
         "1075200",
         "1171200",
+        "787200",
         "691200",
         "300000",
         "518400",
@@ -374,7 +375,7 @@
       "PowerHint": "INTERACTION",
       "Node": "CPULittleClusterMinFreq",
       "Duration": 0,
-      "Value": "1171200"
+      "Value": "787200"
     },
     {
       "PowerHint": "INTERACTION",
@@ -404,13 +405,13 @@
       "PowerHint": "INTERACTION",
       "Node": "CPUBWMinFreq",
       "Duration": 0,
-      "Value": "9155"
+      "Value": "16020"
     },
     {
       "PowerHint": "INTERACTION",
       "Node": "LLCCBWMinFreq",
       "Duration": 0,
-      "Value": "2597"
+      "Value": "11535"
     },
     {
       "PowerHint": "LAUNCH",
@@ -764,7 +765,7 @@
       "PowerHint": "EXPENSIVE_RENDERING",
       "Node": "GPUMinFreq",
       "Duration": 0,
-      "Value": "1"
+      "Value": "4"
     },
     {
       "PowerHint": "EXPENSIVE_RENDERING",
