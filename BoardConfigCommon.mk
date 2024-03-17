@@ -80,8 +80,6 @@ TARGET_USES_ION := true
 ifeq ($(TARGET_HAS_UDFPS),true)
 TARGET_USES_FOD_ZPOS := true
 endif
-# Dolby
-AUDIO_FEATURE_ENABLED_DS2_DOLBY_DAP := true
 
 # Disable Postrender Cleanup
 TARGET_DISABLE_POSTRENDER_CLEANUP := true
