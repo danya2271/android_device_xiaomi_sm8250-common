@@ -194,6 +194,11 @@ vendor.display.defer_fps_frame_count?=2
 # DRM
 drm.service.enabled=true
 
+# Adaptive Suspend
+suspend.short_suspend_threshold_millis=400
+suspend.short_suspend_backoff_enabled=true
+suspend.max_sleep_time_millis=50000
+
 # Fingerprint
 persist.vendor.qfp=false
 
