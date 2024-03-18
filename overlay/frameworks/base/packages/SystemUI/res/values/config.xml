@@ -28,5 +28,5 @@
     <bool name="config_vibrateOnIconAnimation">true</bool>
 
     <!-- Preferred max refresh rate at keyguard, if supported by the display. -->
-    <integer name="config_keyguardMaxRefreshRate">60</integer>
+    <integer name="config_keyguardMaxRefreshRate">30</integer>
 </resources>
