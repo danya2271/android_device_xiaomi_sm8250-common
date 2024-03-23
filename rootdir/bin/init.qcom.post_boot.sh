@@ -2578,7 +2578,7 @@ case "$target" in
 
             # cpuset settings
             echo 0-1 > /dev/cpuset/background/cpus
-            echo 0-3 > /dev/cpuset/system-background/cpus
+            echo 0-6 > /dev/cpuset/system-background/cpus
             # choose idle CPU for top app tasks
             echo 1 > /dev/stune/top-app/schedtune.prefer_idle
 
@@ -2976,8 +2976,8 @@ case "$target" in
                      echo 120 > /proc/sys/kernel/sched_group_downmigrate
 
                      # cpuset settings
-                     #echo 0-3 > /dev/cpuset/background/cpus
-                     #echo 0-3 > /dev/cpuset/system-background/cpus
+                     #echo 0-6 > /dev/cpuset/background/cpus
+                     #echo 0-6 > /dev/cpuset/system-background/cpus
 
                      # Bring up all cores online
                      echo 1 > /sys/devices/system/cpu/cpu1/online
@@ -2999,7 +2999,7 @@ case "$target" in
 
                      # Big cluster min frequency adjust settings
                      if [ -f /sys/module/big_cluster_min_freq_adjust/parameters/min_freq_cluster ]; then
-                         echo "0-3" > /sys/module/big_cluster_min_freq_adjust/parameters/min_freq_cluster
+                         echo "0-6" > /sys/module/big_cluster_min_freq_adjust/parameters/min_freq_cluster
                      fi
                      echo 1305600 > /sys/module/big_cluster_min_freq_adjust/parameters/min_freq_floor
                  ;;
@@ -3148,8 +3148,8 @@ case "$target" in
             echo 120 > /proc/sys/kernel/sched_group_downmigrate
 
             # cpuset settings
-            echo 0-3 > /dev/cpuset/background/cpus
-            echo 0-3 > /dev/cpuset/system-background/cpus
+            echo 0-6 > /dev/cpuset/background/cpus
+            echo 0-6 > /dev/cpuset/system-background/cpus
 
             #if the kernel version >=4.14,use the schedutil governor
             if [ $KernelVersionA -ge 4 ] && [ $KernelVersionB -ge 14 ]; then
@@ -3205,8 +3205,8 @@ case "$target" in
             echo 50000 > /proc/sys/kernel/sched_short_burst_ns
 
             # cpuset settings
-            echo 0-3 > /dev/cpuset/background/cpus
-            echo 0-3 > /dev/cpuset/system-background/cpus
+            echo 0-6 > /dev/cpuset/background/cpus
+            echo 0-6 > /dev/cpuset/system-background/cpus
 
             # disable thermal bcl hotplug to switch governor
             echo 0 > /sys/module/msm_thermal/core_control/enabled
@@ -3507,7 +3507,7 @@ case "$target" in
 
             # cpuset settings
             echo 0-2     > /dev/cpuset/background/cpus
-            echo 0-3     > /dev/cpuset/system-background/cpus
+            echo 0-6     > /dev/cpuset/system-background/cpus
             echo 4-7     > /dev/cpuset/foreground/boost/cpus
             echo 0-2,4-7 > /dev/cpuset/foreground/cpus
             echo 0-7     > /dev/cpuset/top-app/cpus
@@ -4018,7 +4018,7 @@ case "$target" in
 
         # cpuset parameters
         echo 0-2     > /dev/cpuset/background/cpus
-        echo 0-3     > /dev/cpuset/system-background/cpus
+        echo 0-6     > /dev/cpuset/system-background/cpus
         echo 4-7     > /dev/cpuset/foreground/boost/cpus
         echo 0-2,4-7 > /dev/cpuset/foreground/cpus
         echo 0-7     > /dev/cpuset/top-app/cpus
@@ -4172,7 +4172,7 @@ case "$target" in
 
         # cpuset parameters
         echo 0-2     > /dev/cpuset/background/cpus
-        echo 0-3     > /dev/cpuset/system-background/cpus
+        echo 0-6     > /dev/cpuset/system-background/cpus
         echo 4-7     > /dev/cpuset/foreground/boost/cpus
         echo 0-2,4-7 > /dev/cpuset/foreground/cpus
         echo 0-7     > /dev/cpuset/top-app/cpus
@@ -4214,8 +4214,8 @@ case "$target" in
             echo 100 > /proc/sys/kernel/sched_group_upmigrate
 
             # cpuset settings
-            echo 0-3 > /dev/cpuset/background/cpus
-            echo 0-3 > /dev/cpuset/system-background/cpus
+            echo 0-6 > /dev/cpuset/background/cpus
+            echo 0-6 > /dev/cpuset/system-background/cpus
 
 
             # configure governor settings for little cluster
@@ -4324,8 +4324,8 @@ case "$target" in
             echo 100 > /proc/sys/kernel/sched_group_upmigrate
 
             # cpuset settings
-            echo 0-3 > /dev/cpuset/background/cpus
-            echo 0-3 > /dev/cpuset/system-background/cpus
+            echo 0-6 > /dev/cpuset/background/cpus
+            echo 0-6 > /dev/cpuset/system-background/cpus
 
 
             # configure governor settings for little cluster
@@ -5251,8 +5251,8 @@ case "$target" in
 	echo 10 > /sys/class/devfreq/soc:qcom,mincpubw/polling_interval
 
 	# cpuset parameters
-        echo 0-3 > /dev/cpuset/background/cpus
-        echo 0-3 > /dev/cpuset/system-background/cpus
+        echo 0-6 > /dev/cpuset/background/cpus
+        echo 0-6 > /dev/cpuset/system-background/cpus
 
 	# Turn off scheduler boost at the end
         echo 0 > /proc/sys/kernel/sched_boost
@@ -5309,8 +5309,8 @@ case "$target" in
 	echo 1 > /proc/sys/kernel/sched_walt_rotate_big_tasks
 
 	# cpuset parameters
-	echo 0-3 > /dev/cpuset/background/cpus
-	echo 0-3 > /dev/cpuset/system-background/cpus
+	echo 0-6 > /dev/cpuset/background/cpus
+	echo 0-6 > /dev/cpuset/system-background/cpus
 
 	# Turn off scheduler boost at the end
 	echo 0 > /proc/sys/kernel/sched_boost
@@ -5345,8 +5345,8 @@ case "$target" in
 	# wsf Range : 1..1000 So set to bare minimum value 1.
         echo 1 > /proc/sys/vm/watermark_scale_factor
 
-        echo 0-3 > /dev/cpuset/background/cpus
-        echo 0-3 > /dev/cpuset/system-background/cpus
+        echo 0-6 > /dev/cpuset/background/cpus
+        echo 0-6 > /dev/cpuset/system-background/cpus
 
         # Enable oom_reaper
 	if [ -f /sys/module/lowmemorykiller/parameters/oom_reaper ]; then
@@ -5494,8 +5494,8 @@ case "$target" in
 	echo 1 > /proc/sys/kernel/sched_walt_rotate_big_tasks
 
 	# cpuset parameters
-	echo 0-3 > /dev/cpuset/background/cpus
-	echo 0-3 > /dev/cpuset/system-background/cpus
+	echo 0-6 > /dev/cpuset/background/cpus
+	echo 0-6 > /dev/cpuset/system-background/cpus
 
 	# Turn off scheduler boost at the end
 	echo 0 > /proc/sys/kernel/sched_boost
@@ -5530,8 +5530,8 @@ case "$target" in
 	# wsf Range : 1..1000 So set to bare minimum value 1.
         echo 1 > /proc/sys/vm/watermark_scale_factor
 
-        echo 0-3 > /dev/cpuset/background/cpus
-        echo 0-3 > /dev/cpuset/system-background/cpus
+        echo 0-6 > /dev/cpuset/background/cpus
+        echo 0-6 > /dev/cpuset/system-background/cpus
 
         # Enable oom_reaper
 	if [ -f /sys/module/lowmemorykiller/parameters/oom_reaper ]; then
@@ -5735,9 +5735,9 @@ case "$target" in
 	echo 400000000 > /proc/sys/kernel/sched_coloc_downmigrate_ns
 
 	# cpuset parameters
-        echo 0-3     > /dev/cpuset/audio-app/cpus
-        echo 0-3     > /dev/cpuset/background/cpus
-        echo 0-3     > /dev/cpuset/system-background/cpus
+        echo 0-6     > /dev/cpuset/audio-app/cpus
+        echo 0-6     > /dev/cpuset/background/cpus
+        echo 0-6     > /dev/cpuset/system-background/cpus
         echo 4-6     > /dev/cpuset/foreground/boost/cpus
         echo 0-6     > /dev/cpuset/foreground/cpus
         echo 0-7     > /dev/cpuset/top-app/cpus
@@ -6015,8 +6015,8 @@ case "$target" in
 	echo N > /sys/module/lpm_levels/system/perf/perf-l2-ret/idle_enabled
 	echo N > /sys/module/lpm_levels/parameters/sleep_disabled
 
-        echo 0-3 > /dev/cpuset/background/cpus
-        echo 0-3 > /dev/cpuset/system-background/cpus
+        echo 0-6 > /dev/cpuset/background/cpus
+        echo 0-6 > /dev/cpuset/system-background/cpus
         echo 0 > /proc/sys/kernel/sched_boost
 
         # Set Memory parameters
