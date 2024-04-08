@@ -76,6 +76,28 @@
         </activity>
 
         <activity
+            android:name=".camera64.camera64SettingsActivity"
+            android:label="@string/popup_title_cam64"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="com.android.settings.action.IA_SETTINGS" />
+            </intent-filter>
+
+            <meta-data
+                android:name="com.android.settings.category"
+                android:value="com.android.settings.category.ia.system" />
+            <meta-data
+                android:name="com.android.settings.icon"
+                android:resource="@drawable/ic_settings_popup" />
+            <meta-data
+                android:name="com.android.settings.summary"
+                android:resource="@string/summary_empty" />
+            <meta-data
+                android:name="com.android.settings.order"
+                android:value="-255" />
+        </activity>
+
+        <activity
             android:name=".thermal.ThermalActivity"
             android:label="@string/thermal_title">
             <intent-filter>

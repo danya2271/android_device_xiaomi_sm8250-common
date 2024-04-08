@@ -59,4 +59,9 @@
     <string name="thermal_dialer">Dialer</string>
     <string name="thermal_gaming">Gaming</string>
     <string name="thermal_streaming">Streaming</string>
+
+    <!-- 64Mp camera mode -->
+    <string name="camera64_title">Camera mode</string>
+    <string name="camera64_summary">Enable 64Mp camera mode for apps</string>
+    <string name="popup_title_cam64">Front camera sound effects</string>
 </resources>

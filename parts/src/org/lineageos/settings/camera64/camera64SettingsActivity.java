@@ -15,14 +15,14 @@
  * limitations under the License.
  */
 
-package org.lineageos.settings.popupcamera;
+package org.lineageos.settings.camera64;
 
 import android.os.Bundle;
 import android.preference.PreferenceActivity;
 
-public class PopupCameraSettingsActivity extends PreferenceActivity {
+public class camera64SettingsActivity extends PreferenceActivity {
 
-    private static final String TAG_POPUPCAMERA = "popupcamera";
+    private static final String TAG_CAMERA64 = "camera64";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,8 +30,8 @@ public class PopupCameraSettingsActivity extends PreferenceActivity {
 
         getFragmentManager()
                 .beginTransaction()
-                .replace(android.R.id.content, new PopupCameraSettingsFragment(),
-                        TAG_POPUPCAMERA)
+                .replace(android.R.id.content, new camera64SettingsFragment(),
+                        TAG_CAMERA64)
                 .commit();
     }
 }

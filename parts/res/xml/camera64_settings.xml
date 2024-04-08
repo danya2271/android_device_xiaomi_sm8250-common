@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <SwitchPreference
+        android:key="camera64_toggle"
+        android:summary="@string/camera64_summary"
+        android:title="@string/camera64_title"
+        android:defaultValue="true" />
+
+</PreferenceScreen>
