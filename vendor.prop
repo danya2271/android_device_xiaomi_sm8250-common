@@ -168,7 +168,6 @@ ro.surface_flinger.protected_contents=true
 ro.surface_flinger.use_color_management=true
 ro.surface_flinger.wcg_composition_dataspace=143261696
 ro.vendor.display.sensortype=2
-ro.hwui.render_ahead=10
 vendor.display.comp_mask=0
 vendor.display.disable_excl_rect=0
 vendor.display.disable_excl_rect_partial_fb=1
@@ -314,9 +313,7 @@ vendor.usb.use_gadget_hal=0
 ro.config.vc_call_vol_steps=11
 
 # Suspend properties
-suspend.short_suspend_threshold_millis=2000
 suspend.short_suspend_backoff_enabled=true
-suspend.max_sleep_time_millis=40000
 
 # WiFi
 wifi.aware.interface=wifi-aware0
